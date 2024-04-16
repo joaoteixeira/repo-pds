@@ -42,7 +42,7 @@
 
         <StackPanel Grid.Column="0" Margin="15 15 15 0">
             <StackPanel>
-                <TextBlock Text="DeckEdu" FontFamily="{StaticResource GugiRegular}" FontSize="28"/>
+                <TextBlock Text="DeckEducation" FontFamily="{StaticResource GugiRegular}" FontSize="28"/>
                 <Border Background="#A79277" Height="3"/>
             </StackPanel>
             
