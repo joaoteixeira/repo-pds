@@ -1,0 +1,106 @@
+﻿<Window x:Class="DeckEdu.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:DeckEdu"
+        mc:Ignorable="d"
+         Title="Login" Height="450" Width="800"
+        WindowStyle="None"
+        ResizeMode="NoResize" 
+        WindowStartupLocation="CenterScreen"
+        WindowState="Maximized">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1.5*" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <Border Grid.Column="0" Grid.RowSpan="2" Background="#ffe08d"/>
+
+        <Button Grid.Row="0" Grid.ColumnSpan="2"  Background="Transparent" 
+                Cursor="Hand" BorderThickness="0"  
+                Width="32" Margin="8 8" HorizontalAlignment="Right" 
+                Click="Button_Click_Sair">
+            <Image Source="/Recursos/Imagens/icons-excluir-48.png" />
+        </Button>
+
+        <Image Grid.Column="0" Grid.RowSpan="2" Source="/Recursos/Imagens/logo.png" Width="350"/>
+
+
+        <Grid Grid.Column="1" Grid.RowSpan="2">
+            <StackPanel Margin="30" VerticalAlignment="Center">
+                <TextBlock Text="Acesso ao Sistema" 
+               FontSize="26" 
+               FontFamily="{StaticResource GugiRegular}"
+               HorizontalAlignment="Center" />
+
+                <Label Content="Usuário" 
+           FontSize="24" Margin="0 2" />
+
+                <TextBox FontSize="24" Padding="6" 
+             Margin="0 2">
+                    <TextBox.Resources>
+                        <Style TargetType="{x:Type Border}">
+                            <Setter Property="CornerRadius" Value="10"/>
+                        </Style>
+                    </TextBox.Resources>
+                </TextBox>
+
+                <Label Content="Senha" 
+           FontSize="24" Margin="0 2" />
+
+                <TextBox FontSize="24" Padding="6"
+             Margin="0 2">
+                    <TextBox.Resources>
+                        <Style TargetType="{x:Type Border}">
+                            <Setter Property="CornerRadius" Value="10"/>
+                        </Style>
+                    </TextBox.Resources>
+                </TextBox>
+
+                <Grid Margin="0 10">
+
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <Button Grid.Column="0" 
+                Background="#9BB0C1" 
+                BorderBrush="Transparent"
+                Style="{StaticResource ButtonRadius}" Cursor="Hand" Click="Button_Click_Entrar">
+                        <StackPanel Margin="6" VerticalAlignment="Center" 
+                        HorizontalAlignment="Center">
+                            <Image Source="/Recursos/Imagens/portal-entrar.png" 
+                       Width="25" Margin="0 6"  />
+                            <TextBlock Text="ENTRAR" />
+                        </StackPanel>
+                    </Button>
+
+                    <Button Grid.Column="1" 
+                Style="{StaticResource ButtonRadius}"
+                Background="#FF8080"
+                BorderBrush="Transparent"
+                Margin="2 0" Click="Button_Click_Sair">
+
+                        <StackPanel Margin="6" VerticalAlignment="Center" HorizontalAlignment="Center">
+                            <Image Source="/Recursos/Imagens/sair-alternativo.png" 
+   Width="25" Margin="0 6"  />
+                            <TextBlock Text="SAIR" />
+                        </StackPanel>
+
+                    </Button>
+                </Grid>
+
+            </StackPanel>
+        </Grid>
+        
+
+    </Grid>
+</Window>
